@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Business Website Makers</title>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #f4f8f8;
+        color: #17252a;
+        overflow-x: hidden;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+        width: 100%;
+        padding: 16px 8%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 22px;
+        font-weight: 800;
+        color: #17252a;
+    }
+
+    .logo-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #0f4c5c, #00a896);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 25px;
+    }
+
+    .logo span {
+        color: #00a896;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 28px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #17252a;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #00a896;
+    }
+
+    .nav-btn {
+        text-decoration: none;
+        background: #f4a261;
+        color: #17252a;
+        padding: 11px 22px;
+        border-radius: 30px;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(244,162,97,0.4);
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        min-height: 620px;
+        display: flex;
+        align-items: center;
+        padding: 80px 8%;
+        color: white;
+        background:
+            radial-gradient(circle at 85% 20%, rgba(0,168,150,0.5), transparent 30%),
+            radial-gradient(circle at 15% 80%, rgba(244,162,97,0.25), transparent 25%),
+            linear-gradient(135deg, #0b1f26, #0f4c5c);
+    }
+
+    .hero-content {
+        width: 55%;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 10px 18px;
+        border-radius: 30px;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.2);
+        margin-bottom: 20px;
+        color: #dffcf8;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+        color: #f4a261;
+    }
+
+    .hero p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #d7e7e8;
+        max-width: 620px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .main-btn {
+        text-decoration: none;
+        background: #f4a261;
+        color: #17252a;
+        padding: 15px 28px;
+        border-radius: 30px;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+
+    .main-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(244,162,97,0.4);
+    }
+
+    .outline-btn {
+        text-decoration: none;
+        color: white;
+        padding: 13px 28px;
+        border-radius: 30px;
+        border: 2px solid rgba(255,255,255,0.7);
+        font-weight: 600;
+    }
+
+
+    /* ================= HERO VISUAL ================= */
+
+    .hero-visual {
+        width: 45%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .website-preview {
+        width: 390px;
+        background: rgba(255,255,255,0.12);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 25px;
+        padding: 18px;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+        transform: rotate(3deg);
+    }
+
+    .preview-top {
+        display: flex;
+        gap: 7px;
+        margin-bottom: 20px;
+    }
+
+    .dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: #f4a261;
+    }
+
+    .dot:nth-child(2) {
+        background: #00a896;
+    }
+
+    .dot:nth-child(3) {
+        background: #e9c46a;
+    }
+
+    .preview-box {
+        background: linear-gradient(135deg, #0f4c5c, #00a896);
+        height: 150px;
+        border-radius: 18px;
+        padding: 25px;
+    }
+
+    .preview-box h3 {
+        font-size: 24px;
+    }
+
+    .preview-box p {
+        margin-top: 8px;
+        font-size: 13px;
+    }
+
+    .preview-cards {
+        display: flex;
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    .small-card {
+        height: 80px;
+        flex: 1;
+        border-radius: 15px;
+        background: rgba(255,255,255,0.15);
+    }
+
+
+    /* ================= SECTIONS ================= */
+
+    section {
+        padding: 85px 8%;
+    }
+
+    .section-heading {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+        font-size: 40px;
+        color: #0f4c5c;
+    }
+
+    .section-heading h2 span {
+        color: #f4a261;
+    }
+
+    .section-heading p {
+        color: #64748b;
+        margin-top: 10px;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+    }
+
+    .service-card {
+        background: white;
+        padding: 30px 22px;
+        border-radius: 22px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+        transition: 0.4s;
+        border: 1px solid #e7eeee;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,168,150,0.18);
+    }
+
+    .service-icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        background: #e1f5f2;
+        margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+        color: #17252a;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        color: #64748b;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* ================= PRICING ================= */
+
+    .pricing-section {
+        background: linear-gradient(135deg, #e8f6f4, #fff4e8);
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 30px;
+        max-width: 1050px;
+        margin: auto;
+    }
+
+    .price-card {
+        background: white;
+        padding: 35px 28px;
+        border-radius: 25px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        transition: 0.3s;
+        position: relative;
+    }
+
+    .price-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .price-card.popular {
+        border: 3px solid #00a896;
+    }
+
+    .popular-label {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #00a896;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 25px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .price-card h3 {
+        font-size: 25px;
+        color: #0f4c5c;
+    }
+
+    .price {
+        font-size: 48px;
+        font-weight: 800;
+        color: #f4a261;
+        margin: 15px 0;
+    }
+
+    .price-card ul {
+        list-style: none;
+        margin: 25px 0;
+    }
+
+    .price-card ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eeeeee;
+        font-size: 14px;
+    }
+
+    .price-card ul li::before {
+        content: "✓";
+        color: #00a896;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .price-button {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 14px;
+        border-radius: 30px;
+        background: linear-gradient(135deg, #0f4c5c, #00a896);
+        color: white;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .price-button:hover {
+        transform: scale(1.03);
+    }
+
+
+    /* ================= HOW IT WORKS ================= */
+
+    .process-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+
+    .process-card {
+        text-align: center;
+        padding: 25px;
+    }
+
+    .number {
+        width: 65px;
+        height: 65px;
+        margin: auto;
+        margin-bottom: 15px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #0f4c5c, #00a896);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .process-card h3 {
+        margin-bottom: 8px;
+        color: #17252a;
+    }
+
+    .process-card p {
+        color: #64748b;
+        font-size: 14px;
+    }
+
+
+    /* ================= WHY US ================= */
+
+    .why-section {
+        background: #ffffff;
+    }
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+
+    .why-card {
+        padding: 25px;
+        text-align: center;
+        border-radius: 20px;
+        background: #f4f8f8;
+    }
+
+    .why-card .why-icon {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .why-card h3 {
+        color: #0f4c5c;
+        margin-bottom: 8px;
+    }
+
+    .why-card p {
+        color: #64748b;
+        font-size: 13px;
+    }
+
+
+    /* ================= CTA ================= */
+
+    .cta {
+        margin: 50px 8%;
+        padding: 60px 8%;
+        text-align: center;
+        border-radius: 30px;
+        color: white;
+        background:
+            radial-gradient(circle at 80% 20%, rgba(244,162,97,0.4), transparent 25%),
+            linear-gradient(135deg, #0b1f26, #0f4c5c, #00a896);
+    }
+
+    .cta h2 {
+        font-size: 40px;
+    }
+
+    .cta p {
+        margin: 15px 0 25px;
+        color: #d8eeee;
+    }
+
+    .whatsapp {
+        display: inline-block;
+        background: #25D366;
+        color: white;
+        text-decoration: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+        transform: translateY(-4px);
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+        background: #0b1f26;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    footer h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        color: #a8c2c5;
+    }
+
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width: 800px) {
+
+        nav ul {
+            display: none;
+        }
+
+        .nav-btn {
+            display: none;
+        }
+
+        .hero {
+            flex-direction: column;
+            text-align: center;
+            padding: 70px 6%;
+        }
+
+        .hero-content,
+        .hero-visual {
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+        }
+
+        .hero-visual {
+            margin-top: 50px;
+        }
+
+        .website-preview {
+            width: 320px;
+        }
+
+        section {
+            padding: 70px 6%;
+        }
+
+        .section-heading h2 {
+            font-size: 32px;
+        }
+
+        .cta {
+            margin: 30px 5%;
+        }
+
+        .cta h2 {
+            font-size: 30px;
+        }
+    }
+/* ================= EXAMPLES ================= */
+
+.examples {
+    background: linear-gradient(135deg, #f1f8f7, #fff7ed);
+}
+
+.example-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.example-card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.example-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,168,150,0.18);
+}
+
+.example-image {
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    margin-bottom: 18px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    background: #e1f5f2;
+}
+
+.example-card h3 {
+    color: #0f4c5c;
+    margin-bottom: 12px;
+}
+
+.example-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.example-box {
+    margin-top: 18px;
+    padding: 15px;
+    background: #f4f8f8;
+    border-radius: 15px;
+}
+
+.example-box strong {
+    color: #00a896;
+}
+/* ================= BUSINESS FLOW ================= */
+
+.business-flow {
+padding: 90px 8%;
+background: linear-gradient(135deg, #f0faf8, #fff7ed);
+}
+
+.flow-container {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.flow-card {
+width: 210px;
+min-height: 220px;
+background: white;
+padding: 25px 18px;
+text-align: center;
+border-radius: 25px;
+position: relative;
+box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+transition: 0.3s;
+}
+
+.flow-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 20px 40px rgba(0,168,150,0.18);
+}
+
+.flow-number {
+position: absolute;
+top: -15px;
+left: 50%;
+transform: translateX(-50%);
+width: 38px;
+height: 38px;
+border-radius: 50%;
+background: #f4a261;
+color: #17252a;
+font-weight: bold;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.flow-icon {
+font-size: 48px;
+margin: 20px 0 12px;
+}
+
+.flow-card h3 {
+color: #0f4c5c;
+margin-bottom: 10px;
+}
+
+.flow-card p {
+color: #64748b;
+font-size: 14px;
+line-height: 1.6;
+}
+
+.flow-arrow {
+font-size: 35px;
+font-weight: bold;
+color: #00a896;
+}
+
+/* MOBILE FLOW */
+
+@media(max-width: 800px) {
+
+
+.flow-container {
+    flex-direction: column;
+}
+
+.flow-arrow {
+    transform: rotate(90deg);
+}
+
+
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+<div class="logo">
+
+    <div class="logo-icon">🌐</div>
+
+    <div>
+        Business <span>Website Makers</span>
+    </div>
+
+</div>
+
+
+<ul>
+
+    <li><a href="#home">Home</a></li>
+
+    <li><a href="#services">Services</a></li>
+
+    <li><a href="#pricing">Pricing</a></li>
+
+    <li><a href="#process">How It Works</a></li>
+
+</ul>
+
+
+<a href="#contact" class="nav-btn">
+    💬 Contact Us
+</a>
+
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+
+<div class="hero-content">
+
+    <div class="badge">
+        🌟 Affordable Digital Solutions for Local Businesses
+    </div>
+
+
+    <h1>
+        Grow Your Business With a
+        <span>Professional Website</span>
+    </h1>
+
+
+    <p>
+        We create beautiful websites, custom QR codes,
+        digital menus and online solutions to help your
+        business reach more customers.
+    </p>
+
+
+    <div class="hero-buttons">
+
+        <a href="#pricing" class="main-btn">
+            🚀 Get Your Website
+        </a>
+
+
+        <a href="#services" class="outline-btn">
+            View Services →
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<div class="hero-visual">
+
+    <div class="website-preview">
+
+        <div class="preview-top">
+
+            <div class="dot"></div>
+
+            <div class="dot"></div>
+
+            <div class="dot"></div>
+
+        </div>
+
+
+        <div class="preview-box">
+
+            <h3>Your Business 🌐</h3>
+
+            <p>
+                Professional Website For
+                Your Business Success!
+            </p>
+
+        </div>
+
+
+        <div class="preview-cards">
+
+            <div class="small-card"></div>
+
+            <div class="small-card"></div>
+
+            <div class="small-card"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+
+<div class="section-heading">
+
+    <h2>
+        Our <span>Services</span>
+    </h2>
+
+    <p>
+        Everything your business needs to go online!
+    </p>
+
+</div>
+
+
+<div class="services-grid">
+
+
+    <div class="service-card">
+
+        <div class="service-icon">🌐</div>
+
+        <h3>Business Websites</h3>
+
+        <p>
+            Professional and attractive websites
+            for your business.
+        </p>
+
+    </div>
+
+
+
+    <div class="service-card">
+
+        <div class="service-icon">📱</div>
+
+        <h3>Custom QR Codes</h3>
+
+        <p>
+            QR codes for websites, menus,
+            WhatsApp and more.
+        </p>
+
+    </div>
+
+
+
+    <div class="service-card">
+
+        <div class="service-icon">🍴</div>
+
+        <h3>Digital Menus</h3>
+
+        <p>
+            Modern menus for restaurants
+            and food businesses.
+        </p>
+
+    </div>
+
+
+
+    <div class="service-card">
+
+        <div class="service-icon">📍</div>
+
+        <h3>Google Maps</h3>
+
+        <p>
+            Help customers find your
+            business location easily.
+        </p>
+
+    </div>
+
+
+
+    <div class="service-card">
+
+        <div class="service-icon">💬</div>
+
+        <h3>WhatsApp Button</h3>
+
+        <p>
+            Let customers contact your
+            business instantly.
+        </p>
+
+    </div>
+
+
+
+    <div class="service-card">
+
+        <div class="service-icon">🖼️</div>
+
+        <h3>Photo Gallery</h3>
+
+        <p>
+            Showcase your products
+            and services beautifully.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- ADD EXAMPLES SECTION HERE 👇 -->
+
+<section class="examples">
+
+    <div class="section-heading">
+
+        <h2>
+            See How We Can Help <span>Your Business</span>
+        </h2>
+
+        <p>
+            Simple examples to understand our services better!
+        </p>
+
+    </div>
+
+
+    <div class="example-grid">
+
+        <div class="example-card">
+
+            <div class="example-image">🍴</div>
+
+            <h3>Restaurant Website</h3>
+
+            <p>
+                A restaurant can show its menu,
+                food photos, location and WhatsApp contact.
+            </p>
+
+            <div class="example-box">
+
+                <strong>📱 Customer can:</strong>
+
+                <p>
+                    View Menu → See Location →
+                    Order on WhatsApp
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADD OTHER EXAMPLE CARDS HERE -->
+
+    </div>
+
+
+
+
+</div>
+
+<!-- GYM -->
+
+<div class="example-card">
+
+```
+<div class="example-image">🏋️</div>
+
+<h3>Gym Website</h3>
+
+<p>
+    A gym can display membership plans,
+    facilities, trainer details and
+    contact information.
+</p>
+
+<div class="example-box">
+
+    <strong>📱 Customer can:</strong>
+
+    <p>
+        View Plans → See Facilities →
+        Contact Gym
+    </p>
+
+</div>
+```
+
+</div>
+
+<!-- TUITION CENTRE -->
+
+<div class="example-card">
+
+<div class="example-image">🎓</div>
+
+<h3>Tuition Centre Website</h3>
+
+<p>
+    Show available courses, classes,
+    teacher details, timings and
+    admission information.
+</p>
+
+<div class="example-box">
+
+    <strong>📱 Student can:</strong>
+
+    <p>
+        View Courses → Check Timings →
+        Contact Centre
+    </p>
+
+</div>
+
+</div>
+
+<!-- HOTEL -->
+
+<div class="example-card">
+
+<div class="example-image">🏨</div>
+
+<h3>Hotel Website</h3>
+
+<p>
+    A hotel can display rooms,
+    facilities, photos, location
+    and booking contact details.
+</p>
+
+<div class="example-box">
+
+    <strong>📱 Customer can:</strong>
+
+    <p>
+        View Rooms → See Location →
+        Contact Hotel
+    </p>
+
+</div>
+
+
+</div>
+
+<!-- PHOTOGRAPHER -->
+
+<div class="example-card">
+
+
+<div class="example-image">📸</div>
+
+<h3>Photography Website</h3>
+
+<p>
+    Photographers can showcase their
+    portfolio, packages, previous work
+    and booking details.
+</p>
+
+<div class="example-box">
+
+    <strong>📱 Customer can:</strong>
+
+    <p>
+        View Photos → Check Packages →
+        Book Service
+    </p>
+
+</div>
+
+
+</div>
+
+<!-- BAKERY -->
+
+<div class="example-card">
+
+<div class="example-image">🎂</div>
+
+<h3>Bakery Website</h3>
+
+<p>
+    A bakery can show cakes, prices,
+    special orders and WhatsApp
+    contact for easy ordering.
+</p>
+
+<div class="example-box">
+
+    <strong>📱 Customer can:</strong>
+
+    <p>
+        View Cakes → Check Prices →
+        Order on WhatsApp
+    </p>
+
+</div>
+
+
+</div>
+
+<!-- CAR SERVICE -->
+
+<div class="example-card">
+
+
+<div class="example-image">🚗</div>
+
+<h3>Car Service Website</h3>
+
+<p>
+    A car service centre can show
+    available services, prices,
+    location and contact details.
+</p>
+
+<div class="example-box">
+
+    <strong>📱 Customer can:</strong>
+
+    <p>
+        View Services → Check Location →
+        Book Service
+    </p>
+
+</div>
+
+
+</div>
+
+<!-- REAL ESTATE -->
+
+<div class="example-card">
+
+
+<div class="example-image">🏠</div>
+
+<h3>Real Estate Website</h3>
+
+<p>
+    Show houses, plots, properties,
+    photos and contact information
+    for interested customers.
+</p>
+
+<div class="example-box">
+
+    <strong>📱 Customer can:</strong>
+
+    <p>
+        View Properties → See Photos →
+        Contact Agent
+    </p>
+
+</div>
+
+
+</div>
+
+
+</section>
+<!-- ================= BUSINESS FLOW SECTION ================= -->
+
+<section class="business-flow">
+
+```
+<div class="section-heading">
+
+    <h2>
+        How Your Customers <span>Connect With You</span>
+    </h2>
+
+    <p>
+        A simple way to take your business online!
+    </p>
+
+</div>
+
+
+<div class="flow-container">
+
+
+    <!-- STEP 1 -->
+
+    <div class="flow-card">
+
+        <div class="flow-number">1</div>
+
+        <div class="flow-icon">📱</div>
+
+        <h3>Scan QR Code</h3>
+
+        <p>
+            Customer scans your business QR code.
+        </p>
+
+    </div>
+
+
+    <div class="flow-arrow">→</div>
+
+
+    <!-- STEP 2 -->
+
+    <div class="flow-card">
+
+        <div class="flow-number">2</div>
+
+        <div class="flow-icon">🌐</div>
+
+        <h3>Open Website</h3>
+
+        <p>
+            Your professional business website opens.
+        </p>
+
+    </div>
+
+
+    <div class="flow-arrow">→</div>
+
+
+    <!-- STEP 3 -->
+
+    <div class="flow-card">
+
+        <div class="flow-number">3</div>
+
+        <div class="flow-icon">👀</div>
+
+        <h3>Explore Business</h3>
+
+        <p>
+            Customer views your products and services.
+        </p>
+
+    </div>
+
+
+    <div class="flow-arrow">→</div>
+
+
+    <!-- STEP 4 -->
+
+    <div class="flow-card">
+
+        <div class="flow-number">4</div>
+
+        <div class="flow-icon">💬</div>
+
+        <h3>Contact You</h3>
+
+        <p>
+            Customer contacts you through WhatsApp.
+        </p>
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+
+
+
+
+<!-- ================= PRICING ================= -->
+
+<section class="pricing-section" id="pricing">
+
+
+<div class="section-heading">
+
+    <h2>
+        Affordable <span>Pricing</span>
+    </h2>
+
+    <p>
+        Choose the perfect package for your business.
+    </p>
+
+</div>
+
+
+<div class="pricing-grid">
+
+
+    <!-- STARTER -->
+
+    <div class="price-card">
+
+        <h3>🚀 Starter</h3>
+
+        <div class="price">₹500</div>
+
+
+        <ul>
+
+            <li>1 Page Website</li>
+
+            <li>Business Information</li>
+
+            <li>Contact Details</li>
+
+            <li>WhatsApp Button</li>
+
+            <li>1 Custom QR Code</li>
+
+        </ul>
+
+
+        <a href="#contact" class="price-button">
+            Get Started
+        </a>
+
+    </div>
+
+
+
+    <!-- BUSINESS PRO -->
+
+    <div class="price-card popular">
+
+        <div class="popular-label">
+            ⭐ MOST POPULAR
+        </div>
+
+
+        <h3>💼 Business Pro</h3>
+
+        <div class="price">₹1000</div>
+
+
+        <ul>
+
+            <li>Up to 3 Pages</li>
+
+            <li>Business Information</li>
+
+            <li>Photo Gallery</li>
+
+            <li>WhatsApp Button</li>
+
+            <li>Google Maps</li>
+
+            <li>2 Custom QR Codes</li>
+
+        </ul>
+
+
+        <a href="#contact" class="price-button">
+            Get Started
+        </a>
+
+    </div>
+
+
+
+    <!-- PREMIUM -->
+
+    <div class="price-card">
+
+        <h3>👑 Premium</h3>
+
+        <div class="price">₹2000</div>
+
+
+        <ul>
+
+            <li>Up to 5 Pages</li>
+
+            <li>Professional Design</li>
+
+            <li>Photo Gallery</li>
+
+            <li>Digital Menu</li>
+
+            <li>WhatsApp Integration</li>
+
+            <li>Google Maps</li>
+
+            <li>Multiple QR Codes</li>
+
+        </ul>
+
+
+        <a href="#contact" class="price-button">
+            Get Started
+        </a>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section id="process">
+
+
+<div class="section-heading">
+
+    <h2>
+        How It <span>Works</span>
+    </h2>
+
+    <p>
+        Getting your business online is simple!
+    </p>
+
+</div>
+
+
+<div class="process-grid">
+
+
+    <div class="process-card">
+
+        <div class="number">1</div>
+
+        <h3>Contact Us</h3>
+
+        <p>
+            Tell us about your business.
+        </p>
+
+    </div>
+
+
+
+    <div class="process-card">
+
+        <div class="number">2</div>
+
+        <h3>Choose Package</h3>
+
+        <p>
+            Select the package that suits you.
+        </p>
+
+    </div>
+
+
+
+    <div class="process-card">
+
+        <div class="number">3</div>
+
+        <h3>Send Details</h3>
+
+        <p>
+            Share your business details and photos.
+        </p>
+
+    </div>
+
+
+
+    <div class="process-card">
+
+        <div class="number">4</div>
+
+        <h3>Go Online!</h3>
+
+        <p>
+            Your website is ready to share!
+        </p>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= WHY US ================= -->
+
+<section class="why-section">
+
+```
+<div class="section-heading">
+
+    <h2>
+        Why Choose <span>Us?</span>
+    </h2>
+
+</div>
+
+
+<div class="why-grid">
+
+
+    <div class="why-card">
+
+        <div class="why-icon">💰</div>
+
+        <h3>Affordable</h3>
+
+        <p>
+            Budget-friendly prices.
+        </p>
+
+    </div>
+
+
+
+    <div class="why-card">
+
+        <div class="why-icon">⚡</div>
+
+        <h3>Quick Delivery</h3>
+
+        <p>
+            Fast and reliable service.
+        </p>
+
+    </div>
+
+
+
+    <div class="why-card">
+
+        <div class="why-icon">😊</div>
+
+        <h3>Easy to Understand</h3>
+
+        <p>
+            Simple designs for everyone.
+        </p>
+
+    </div>
+
+
+
+    <div class="why-card">
+
+        <div class="why-icon">🤝</div>
+
+        <h3>Friendly Support</h3>
+
+        <p>
+            We are here to help you.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<div class="cta" id="contact">
+
+
+<h2>
+    🚀 Ready To Take Your Business Online?
+</h2>
+
+
+<p>
+    Let's build something amazing for your business today!
+</p>
+
+
+<!-- CHANGE THIS NUMBER -->
+
+<a
+    href="https://wa.me/919573684964"
+    target="_blank"
+    class="whatsapp"
+>
+
+    💬 Chat With Us On WhatsApp
+
+</a>
+
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+<h3>
+    🌐 Business Website Makers
+</h3>
+
+
+<p>
+    We Take Your Business Online! 🚀
+</p>
+
+
+<br>
+
+
+<p>
+    © 2026 Business Website Makers |
+    All Rights Reserved
+</p>
+
+
+</footer>
+
+</body>
+</html>
